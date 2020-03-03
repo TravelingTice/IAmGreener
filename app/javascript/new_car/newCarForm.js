@@ -15,7 +15,10 @@ const nextQuestion = () => {
 
 export const initNewCarForm = () => {
   // add listener to the yes button on the form
-  document.querySelector('#yes-btn').addEventListener('click', nextQuestion);
+  document.querySelectorAll('.yes-btn').forEach(button => {
+    button.addEventListener('click', nextQuestion);
+  });
+
   const questionSections = document.querySelectorAll('.car-question');
   if (questionSections) {
     questionSections.forEach(section => {
