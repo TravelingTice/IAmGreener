@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :users do
     resources :cars, only: [:new, :create]
-    resources :home, only: [:new, :create]
+    resources :homes, only: [:new, :create]
   end
 end
