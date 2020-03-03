@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2020_03_03_141142) do
 
   create_table "homes", force: :cascade do |t|
     t.string "location"
-    t.string "type"
+    t.string "home_type"
     t.string "isolation_type"
     t.integer "inhabitants_size"
     t.bigint "user_id"

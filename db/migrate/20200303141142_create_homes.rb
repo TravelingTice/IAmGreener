@@ -2,7 +2,7 @@ class CreateHomes < ActiveRecord::Migration[5.2]
   def change
     create_table :homes do |t|
       t.string :location
-      t.string :type
+      t.string :home_type
       t.string :isolation_type
       t.integer :inhabitants_size
       t.references :user
