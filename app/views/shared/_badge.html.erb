@@ -1,0 +1,18 @@
+<div title="<%= badge.name %>" class="ui-badge text-center <%= 'gray-filter' unless current_user.has_badge?(badge) %>" data-badge-id="<%= badge.id %>">
+
+  <%= image_tag(asset_path("badges_icons/svg/#{badge.icon_url}")) %>
+
+  <div>
+    <% unless badge.stars.nil? %>
+      <% badge.stars.times do %>
+        <i class="fas fa-star"></i>
+      <% end %>
+    <% end %>
+  </div>
+
+
+  <div class="background-svg">
+    <%= image_tag(asset_path("badges_backgrounds/#{badge.badge_type}.svg")) %>
+  </div>
+
+</div>

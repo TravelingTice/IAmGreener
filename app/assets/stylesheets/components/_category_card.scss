@@ -4,37 +4,38 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+.ui-category-card-grid {
+  display: grid;
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .category-ui-card{
-  display:flex;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
   padding: 10px;
   margin: 15px;
   background-color: white;
   box-shadow: 1px 1px 10px rgba(0,0,0,.2);
-
   img {
-  height: 150px;
-  width: 50%;
-  padding: 10px;
+    height: 150px;
+    width: 50%;
+    padding: 10px;
   }
-
 }
 
 .link {
-    margin-top: 60px;
-    margin-left: 60px;
     padding: 10px;
-    justify-content: center;
     text-decoration: none;
-
     h5, a {
       text-decoration: none;
     }
   }
 
 @media (min-width: 900px) {
-
   .category-ui-card {
     margin: 5px;
   }
-
 }

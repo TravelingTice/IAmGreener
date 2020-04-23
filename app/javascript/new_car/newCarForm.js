@@ -24,7 +24,7 @@ const inputChange = () => {
 
 const addListeners = () => {
   // add listener to the yes button on the form
-  const btn =   document.querySelector('#yes-btn');
+  const btn = document.querySelector('#yes-btn');
   if (btn) {
      btn.addEventListener('click', nextQuestion);
     // add listener to the form of the car brand
@@ -45,16 +45,9 @@ const nextQuestion = () => {
   setTimeout(() => {
     nextElem.classList.add('selected');
     nextElem.classList.remove('positioned-right');
-  }, 100)
+  }, 100);
 }
 
 export const initNewCarForm = () => {
   addListeners();
-
-  const questionSections = document.querySelectorAll('.car-question');
-  if (questionSections) {
-    questionSections.forEach(section => {
-
-    });
-  }
 }

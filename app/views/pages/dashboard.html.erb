@@ -21,13 +21,22 @@
 
     <% if current_user.badges.size > 0 %>
         <div class="ui-card m-0">
-        <h2>My badges</h2>
-        <div class="badges-container dashboard-badges">
 
-          <%= render 'shared/badges', badges: current_user.badges %>
+        <h2>My badges</h2>
+
+        <div class="badges-container">
+
+          <% current_user.badges.each do |badge| %>
+
+            <%= render 'shared/badge', badge: badge %>
+            <%= render 'shared/badge_infowindow', badge: badge %>
+
+          <% end %>
+
         </div>
       </div>
-    <% end %>
+
+      <% end %>
 
       <div class="friends-ui-card m-0 mt-4">
         <h3>Ranking:</h3>
@@ -57,9 +66,11 @@
   </div>
 </div>
 
-
-<div class="container">
-  <%= render 'shared/categories', categories: @categories %>
+<h2>Categories:</h2>
+<div class="ui-category-card-grid">
+  <% @categories.each do |category| %>
+    <%= render 'shared/category', category: category %>
+  <% end %>
 </div>
 
 <div style="height: 30px;"></div>

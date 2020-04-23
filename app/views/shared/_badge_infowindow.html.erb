@@ -1,0 +1,20 @@
+<div class="badge-info-window-container" id="badge-<%= badge.id %>">
+  <div class="badge-info-window">
+    <div class="badge-info-window-top">
+      <i id="close-badge-window" class="fas fa-times"></i>
+    </div>
+    <div class="badge-info-window-image">
+
+      <%= render 'shared/badge', badge: badge %>
+
+    </div>
+
+    <div class="badge-info-window-details text-center">
+      <h4 class="px-4"><%= badge.name %></h4>
+      <p class="px-5 mt-3"><%= badge.description %></p>
+
+      <%= link_to "More info", badges_path, class: 'ui-btn more-info-btn' %>
+    </div>
+
+  </div>
+</div>
