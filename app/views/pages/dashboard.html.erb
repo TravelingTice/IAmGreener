@@ -24,7 +24,12 @@
         <h2>My badges</h2>
         <div class="badges-container dashboard-badges">
 
-          <%= render 'shared/badges', badges: current_user.badges %>
+          <% current_user.badges.each do |badge| %>
+
+            <%= render 'shared/badge', badge: badge %>
+
+          <% end %>
+
         </div>
       </div>
     <% end %>

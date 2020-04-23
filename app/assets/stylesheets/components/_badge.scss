@@ -16,7 +16,7 @@
 }
 
 .ui-badge {
-  position: relative;
+  background-image: asset-url('badges_backgrounds/green.svg');
   .svg-background {
     position: absolute;
     top: 0;
