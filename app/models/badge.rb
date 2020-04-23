@@ -18,17 +18,6 @@ class Badge < ApplicationRecord
 
   end
 
-  def color
-    case badge_type
-    when 'good'
-      { background: 'rgba(42, 139, 123, 0.1)', outline: 'rgb(32, 99, 83)'}
-    when 'bad'
-      { background: 'rgba(163, 24, 16, 0.3)', outline: 'rgb(209, 18, 8)'}
-    when 'legendary'
-      { background: 'rgba(179, 138, 43, 0.1)', outline: 'rgb(235, 164, 0)'}
-    end
-  end
-
   def self.find_by_type(type)
     badges = Badge.where(badge_type: type)
     # remove any duplicates
