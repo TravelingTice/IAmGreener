@@ -29,6 +29,7 @@
           <% current_user.badges.each do |badge| %>
 
             <%= render 'shared/badge', badge: badge %>
+            <%= render 'shared/badge_infowindow', badge: badge %>
 
           <% end %>
 

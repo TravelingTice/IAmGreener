@@ -20,9 +20,9 @@
 
 .ui-badge {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   .background-svg {
     position: absolute;
     top: 0;
@@ -35,6 +35,7 @@
     }
   }
   > img {
+    margin-top: 17px;
     width: 40px;
     margin-bottom: 20px;
   }
@@ -44,55 +45,12 @@
     z-index: 100;
     color: #ffa600;
     bottom: 20px;
+    &:nth-child(2) {
+      position: relative;
+      top: -14px;
+    }
     @media (min-width: 700px) {
       font-size: 18px;
     }
-  }
-}
-
-
-.badges-ui-card {
-  padding: 0;
-  margin: 0;
-  margin-top: 10px;
-  background-color: white;
-  box-shadow: 1px 1px 10px rgba(0,0,0,.3);
-  width: fit-content;
-  // margin: 15px;
-  // padding: 10px;
-}
-
-.badges-ui-card img {
-  height: 100px;
-  margin: 5px;
-  padding: 0;
-  overflow: hidden;
-}
-
-.badges-ui-card p {
-  margin: 10px;
-  font-weight: bold;
-  margin: 10px;
-  width: 100px;
-}
-
-.badge-flex-container {
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
-  padding: 5px;
-  margin-top: 20px;
-}
-
-.badge-ui-card {
-  background-color: white;
-  box-shadow: 1px 1px 10px rgba(0,0,0,.3);
-  margin: 5px;
-
-}
-
-@media (max-width: 700px) {
-  .badges-ui-card img {
-    height: 50px;
   }
 }

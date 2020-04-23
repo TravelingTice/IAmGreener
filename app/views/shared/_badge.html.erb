@@ -2,11 +2,14 @@
 
   <%= image_tag(asset_path("badges_icons/svg/#{badge.icon_url}")) %>
 
-  <% unless badge.stars.nil? %>
-    <% badge.stars.times do %>
-      <i class="fas fa-star"></i>
+  <div>
+    <% unless badge.stars.nil? %>
+      <% badge.stars.times do %>
+        <i class="fas fa-star"></i>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
+
 
   <div class="background-svg">
     <%= image_tag(asset_path('badges_backgrounds/green.svg')) %>
