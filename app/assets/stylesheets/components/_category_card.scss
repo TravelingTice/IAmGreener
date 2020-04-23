@@ -4,6 +4,13 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+.ui-category-card-grid {
+  display: grid;
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .category-ui-card{
   display: flex;
   align-items: center;
