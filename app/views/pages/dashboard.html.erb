@@ -21,8 +21,10 @@
 
     <% if current_user.badges.size > 0 %>
         <div class="ui-card m-0">
+
         <h2>My badges</h2>
-        <div class="badges-container dashboard-badges">
+
+        <div class="badges-container">
 
           <% current_user.badges.each do |badge| %>
 
@@ -32,7 +34,8 @@
 
         </div>
       </div>
-    <% end %>
+
+      <% end %>
 
       <div class="friends-ui-card m-0 mt-4">
         <h3>Ranking:</h3>

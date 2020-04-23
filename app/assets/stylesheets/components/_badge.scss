@@ -1,6 +1,9 @@
 .badges-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  .ui-badge {
+    min-height: 100px;
+  }
 }
 
 // STYLES ONLY FOR TOTAL BADGE LIST
@@ -16,28 +19,24 @@
 }
 
 .ui-badge {
-  background-image: asset-url('badges_backgrounds/green.svg');
-  .svg-background {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .background-svg {
     position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    width: 100%;
-    z-index: 1;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
-  img {
-    position: relative;
-    width: 100%;
-    padding: 17px;
-    @media (min-width: 700px) {
-      padding: 27px;
-    }
-    @media (min-width: 991px) {
-      padding: 35px;
-    }
-    z-index: 100;
-    &.scaled-img {
-      transform: translateY(5px) scale(1.1);
-    }
+  > img {
+    width: 40px;
+    margin-bottom: 20px;
   }
   i {
     font-size: 12px;
@@ -47,9 +46,6 @@
     bottom: 20px;
     @media (min-width: 700px) {
       font-size: 18px;
-    }
-    &#middle-star {
-      bottom: 16px;
     }
   }
 }
